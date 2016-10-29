@@ -28,7 +28,7 @@ def data_string(url, soup):
             director = director + '/' + drct.string
         director = director[1:]
 
-        date = info.find(string=re.compile(r'\d{4}'))
+        date = info.find(string=re.compile(r'^\d{4}'))
         if isinstance(date, str):
             date = date.split('(')[0]
         else:
