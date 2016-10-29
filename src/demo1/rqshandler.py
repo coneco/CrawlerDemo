@@ -29,4 +29,7 @@ class RQSHandler(object):
         for link in self.soup.find_all('a'):
             href = link.get('href')
             if isinstance(href, str) and self.follow_reg.match(href):
-                yield '/'.join(href.split('/')[:5]) + '/'
+                if self.data_reg.match(href):
+                    yield '/'.join(href.split('/')[:5]) + '/'
+                else:
+                    yield href
