@@ -33,7 +33,7 @@ def data_string(url, soup):
         else:
             date = 'N/A'
 
-        score = soup.find(id='interest_sectl').strong.string
+        score = content.find(id='interest_sectl').strong.string
         if not score:
             score = 'N/A'
         return number + '|' + title + '|' + director + '|' + date + '|' + score + '\n'
