@@ -2,12 +2,13 @@
 
 import re
 
+DATA_PATH = '.\\data\\raw_data.csv'
 
-INIT_PAGE = "https://movie.douban.com/"
+INIT_PAGE = 'https://movie.douban.com/'
 
-FOLLOW_REG = r"https://movie\.douban\.com/.*"
+FOLLOW_REG = r'https://movie\.douban\.com/.*'
 
-DATA_REG = r"https://movie\.douban\.com/subject/\d*"
+DATA_REG = r'https://movie\.douban\.com/subject/\d*'
 
 COLS = ['number', 'title', 'director', 'date', 'score']
 DELIMITER = '|'

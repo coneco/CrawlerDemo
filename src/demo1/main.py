@@ -13,7 +13,7 @@ def main():
     url_queue.put(config.INIT_PAGE)
     seen.add(config.INIT_PAGE)
 
-    data_file = open('.\\data\\raw_data.csv', 'w', encoding='utf-8')
+    data_file = open(config.DATA_PATH, 'w', encoding='utf-8')
     data_file.write(config.DELIMITER.join(config.COLS) + '\n')
 
     while not url_queue.empty():
